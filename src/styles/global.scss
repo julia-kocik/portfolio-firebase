@@ -1,0 +1,53 @@
+@import "settings.scss";
+
+//GLOBAL
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root, 
+canvas {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  overflow: hidden;
+  font-family: $font-main;
+}
+
+
+
+//RWD//
+$max-tablet-width: 1024px;
+$min-tablet-width: 577px;
+$max-mobile-width: 576px;
+
+@mixin tablet {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $max-mobile-width) {
+    @content;
+  }
+}
+
+@include tablet {
+  body {
+    overflow: visible;
+  }
+}
+
+@include mobile {
+  body {
+    overflow: visible;
+  }
+}

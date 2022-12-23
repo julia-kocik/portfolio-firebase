@@ -1,21 +1,10 @@
 ## PORTFOLIO
 
-https://shrouded-beyond-46081.herokuapp.com/
+http://juliakocik-portfolio.com/
 
 ## How to use
 
-#### Endpoints:
-
-`api/projects`
-`api/projects/:id`
-
 #### To local run:
-
-backend start:
-
-`yarn server`
-
-frontend start:
 
 `yarn start`
 
@@ -26,10 +15,7 @@ frontend start:
 - @react-three-fiber
 - @redux
 - @redux-thunk
-- @axios
-- @expressJS
-- @MongoDB
-- @mongoose
+- @firebase
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

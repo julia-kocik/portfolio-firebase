@@ -1,0 +1,115 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
+
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72vh;
+    h2 {
+        color: $color-white;
+    }
+    .project {
+        border: 3px solid $color-white;
+        border-radius: 5px;
+        width: 80%;
+        height: 70%;
+        display: flex;
+        color: $color-white;
+        transform: translateX(-120%);
+        .projectLeft {
+            flex: 0 0 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 3px solid $color-white;
+            .titleProject {
+               text-align: center;
+               padding: 0 10px;
+            }
+        }
+        .projectRight {
+            flex: 0 0 80%;
+            display: flex;
+            flex-direction: column;
+            .content {
+                flex: 0 0 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 3px solid $color-white;
+            }
+            .links {
+                flex: 0 0 50%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+    }
+    .show {
+        transform: translateX(0%);
+        transition: $transition;
+    }
+}
+
+
+@include tablet {
+    .root {
+        height: 85vh;
+        .project {
+            flex-direction: column;
+            height: 80%;
+            .projectLeft {
+                border-bottom: 3px solid $color-white;
+                border-right: none;
+            }
+            .projectRight {
+                .content {
+                    font-size: 18px;
+                    padding: 20px 30px;
+                }
+                .links {
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .root {
+        height: 170vh;
+        align-items: flex-start;
+        margin-top: 40px;
+        .project {
+            flex-direction: column;
+            height: 80%;
+            .projectLeft {
+                border-bottom: 3px solid $color-white;
+                border-right: none;
+            }
+            .projectRight {
+                .content {
+                    font-size: 18px;
+                    padding: 20px 30px;
+                }
+                .links {
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-right: 0px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 0 0 30%;
+                    .btnProjects {
+                        height: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
