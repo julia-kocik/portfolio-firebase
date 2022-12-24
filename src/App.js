@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import {AnimatedSwitch} from 'react-router-transition';
 
@@ -23,7 +23,7 @@ const App = () => (
         <Route exact path='/' component={Homepage} />
         <Route exact path='/home' component={Homepage} />
         <Route exact path='/project/:id' component={Project} />
-        <Redirect to='/' />
+        <Route exact path='*' component={Homepage} />
       </AnimatedSwitch>
     </MainLayout>
   </Provider>
