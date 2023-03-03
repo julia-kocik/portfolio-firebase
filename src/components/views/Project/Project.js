@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { connect } from 'react-redux';
 import { getProjectDetails } from '../../../redux/actions/projectActions';
 import {Button } from '../../common/Button/Button';
-
+import Loading from '../../common/Loading/Loading';
 
 import styles from './Project.module.scss';
 
@@ -22,7 +22,7 @@ const Component = ({className, getProject, project, loading, error}) => {
   return (
     <div className={clsx(className, styles.root)}>
       {(loading || loading === undefined) ? (
-        <h2>Loading...</h2>
+        <h2><Loading/></h2>
       ) : error ? (
         <h2>{error}</h2>
       ) : (

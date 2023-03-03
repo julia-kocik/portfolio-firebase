@@ -9,6 +9,7 @@ import { getProjects } from '../../../redux/actions/projectActions';
 import { connect } from 'react-redux';
 import clsx from 'clsx';
 import styles from './Homepage.module.scss';
+import Loading from '../../common/Loading/Loading';
 
 const Component = ({className, getProjects, projects, loading, error}) => {
   useEffect(() => {
@@ -18,7 +19,7 @@ const Component = ({className, getProjects, projects, loading, error}) => {
   return (
     <div className={clsx(className, styles.root)}>
       {(loading || loading === undefined) ? (
-        <h2>Loading...</h2>
+        <h2><Loading/></h2>
       ) : error ? (
         <h2>{error}</h2>
       ) : (
