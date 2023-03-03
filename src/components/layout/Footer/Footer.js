@@ -13,7 +13,7 @@ const Component = ({className}) => (
     <div className={styles.spanBox}>
       <span>- move around</span>
       <span>- zoom in/out</span>
-      <span>- pick a planet</span>
+      <span>- choose a planet</span>
     </div>
   </div>
 );
