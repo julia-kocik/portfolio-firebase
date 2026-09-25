@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Button.module.scss';
 
 
-export const Button = ({src, title}) => <a className={styles.root} href={src} target='_blank'>{title}</a>;
+export const Button = ({src, title}) => <a className={styles.root} href={src} target='_blank' rel="noreferrer">{title}</a>;
 
 
 Button.propTypes = {
