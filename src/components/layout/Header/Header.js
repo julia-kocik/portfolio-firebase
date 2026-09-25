@@ -7,11 +7,11 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Header.module.scss';
 
-const Component = ({className}) => (
+const Component = ({ className }) => (
   <div className={clsx(className, styles.root)}>
     <div className={styles.leftBox}>
-      <h2>JavaScript Developer</h2>
-      <h2>Julia Kocik</h2>
+      <h2>Fullstack Developer | Java | React | Angular</h2>
+      <h2>Julia Kocik-Kosińska</h2>
     </div>
     <div className={styles.rightBox}>
       <Link to="/" className={styles.link}>
@@ -26,7 +26,4 @@ Component.propTypes = {
   className: PropTypes.string,
 };
 
-export {
-  Component as Header,
-  Component as HeaderComponent,
-};
+export { Component as Header, Component as HeaderComponent };

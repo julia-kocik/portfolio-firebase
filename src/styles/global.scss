@@ -21,7 +21,15 @@ body {
   font-family: $font-main;
 }
 
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-main;
+  font-weight: 400;
+}
 
 //RWD//
 $max-tablet-width: 1024px;
